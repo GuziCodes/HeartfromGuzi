@@ -1,0 +1,248 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #3a0ca3, #4361ee); /* purple to light blue */
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: #720026; /* deep purple */
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #90e0ef; /* light blue */
+  margin-bottom: 5px;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.game-area {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-board {
+  background-color: #3f37c9; /* purple */
+  border-radius: 8px;
+  border: 3px solid #720026;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+canvas {
+  display: block;
+  background-color: #1c1c54; /* dark purple */
+  border-radius: 4px;
+}
+
+.game-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 180px;
+}
+
+.score-container,
+.next-container,
+.controls {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: #720026;
+}
+
+#score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #90e0ef;
+}
+
+#next {
+  background-color: #1c1c54;
+  border-radius: 4px;
+}
+
+.controls p {
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+button {
+  background: #720026;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #9d0208;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.message-reveal {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#message-display {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #90e0ef;
+  margin: 10px 0;
+  min-height: 40px;
+  white-space: pre-line;
+}
+
+#letter-indicator {
+  color: #720026;
+  font-weight: bold;
+}
+
+.mobile-controls-ui {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.control-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(114, 0, 38, 0.8);
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.mobile-controls {
+  display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .game-wrapper {
+    flex-direction: column;
+  }
+
+  .desktop-controls {
+    display: none;
+  }
+
+  .mobile-controls {
+    display: block;
+  }
+
+  .mobile-controls-ui {
+    display: flex !important;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  canvas#tetris {
+    width: 250px;
+    height: 500px;
+  }
+
+  .control-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  #message-display {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+}
+#message-display {
+  white-space: pre-line; /* preserves line breaks */
+  /* other styles you already have */
+}

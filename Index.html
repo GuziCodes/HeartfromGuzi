@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tetris with Message Reveal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ma confess si Guzi??</h1>
+      <p class="subtitle">Good luck Vall! </br> Sana matapos moni !</p>
+    </header>
+
+    <div class="game-wrapper">
+      <div class="game-area">
+        <div class="game-board">
+          <canvas id="tetris" width="300" height="600"></canvas>
+        </div>
+
+        <div class="message-reveal">
+          <h3>Basaha ni teh 💌 </h3>
+          <div id="message-display">6 words</div> 
+          <div id="letter-indicator"> OoO </div>
+                    <div id="line-indicator"> 🍀 </div>
+                    <div id="line-indicator1"> 🍀 </div>
+
+
+        </div>
+      </div>
+
+      <div class="game-ui">
+        <div class="score-container">
+          <h3>Score</h3>
+          <div id="score">0</div>
+        </div>
+
+        <div class="next-container">
+          <h3>Next Piece</h3>
+          <canvas id="next" width="100" height="100"></canvas>
+        </div>
+
+        <div class="controls">
+          <h3>Controls</h3>
+          <p class="desktop-controls">
+            A D : Move<br />
+            E : Rotate<br />
+            S : Soft Drop<br />
+            Q : Hard Drop
+          </p>
+          <p class="mobile-controls">
+            Swipe: Move<br />
+            Tap: Rotate<br />
+            Swipe Down: Drop
+          </p>
+        </div>
+
+        <div class="buttons">
+          <button id="start-button">Start Game</button>
+          <button id="pause-button">Pause</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-controls-ui hidden">
+      <div class="control-buttons">
+        <button id="left-btn" class="control-btn">←</button>
+        <button id="rotate-btn" class="control-btn">↻</button>
+        <button id="right-btn" class="control-btn">→</button>
+        <button id="drop-btn" class="control-btn">↓</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
